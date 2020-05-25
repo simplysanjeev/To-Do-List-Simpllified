@@ -4,6 +4,7 @@
   "description": "\"TO DO LIST TO MANAGE YOUR DIALY LIFE WORK FLOW\"",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +14,7 @@
   "author": "Sanjeev Kumar",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.3",
     "express": "^4.17.1"
   }
 }
