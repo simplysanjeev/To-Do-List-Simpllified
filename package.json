@@ -1,0 +1,18 @@
+{
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "\"TO DO LIST TO MANAGE YOUR DIALY LIFE WORK FLOW\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"tasks",
+    "manager\""
+  ],
+  "author": "Sanjeev Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
