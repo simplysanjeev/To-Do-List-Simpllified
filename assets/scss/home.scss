@@ -1,0 +1,262 @@
+body{
+    background-color: #808080;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    #container{
+        background-color: #FFFFFF;
+        margin-top: 10px;
+        width: 600px;
+        height: fit-content;
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0px;
+            margin-top: 10px;
+            color: #808080;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid #d4d3d3;
+        }
+        #main-body{
+            width: 100%;
+            #form-container{
+                width: 100%;
+                .label-container{
+                    padding-left: 30px;
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+                form{
+                    width: 100%;
+                    input, select{
+                        width: 100%;
+                        height: 20px;
+                        border: none;
+                        outline: none;
+                        padding-left: 30px;
+                        margin-bottom: 5px;
+                        background-color: transparent;
+                    }
+                    #input-description-container{
+                        width: 100%;
+                        border-bottom: 1px solid #d4d3d3;
+                        padding-bottom: 10px;
+                    }
+                    #input-description-container:hover{
+                        background-color: lightgrey;
+                    }
+                    #input-category-due-date-container{
+                        width: 100%;
+                        border-bottom: 1px solid #d4d3d3;
+                        display: flex;
+                        div{
+                            width: 50%;
+                        }
+                        #input-category-container{
+                            border-right:1px solid #d4d3d3;
+                            padding-bottom: 10px;
+                            .accordian-container{
+                                width: 100%;
+                                position: relative;
+                                .accordian-display-container{
+                                    width: 100%;
+                                    #accordian-display{
+                                        width: 95%;
+                                        height: 40px;
+                                        cursor: pointer;
+                                    }
+
+                                }
+                                .accordian{
+                                    z-index: 10;
+                                    width: 100%;
+                                    position: absolute;
+                                    top:35px;
+                                    display: none;
+                                    .accordian-item{
+                                        width: 100%;
+                                        height: 30px;
+                                        input{
+                                            display: none;
+                                        }
+                                        label{
+                                            width: 100%;
+                                            height: 100%;
+                                            display: block;
+                                            display: flex;
+                                            align-items: center;
+                                            padding-left: 30px;
+                                            box-sizing: border-box;
+                                            background-color: white;
+                                        }
+                                        label:hover{
+                                            background-color: purple;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        #input-category-container:hover{
+                            background-color: #d4d3d3;
+                        }
+                        #input-due-date-container{
+                            border-left: 1px solid #d4d3d3;
+                            padding-bottom: 10px;
+                            .label-container{
+                                padding-bottom: 10px;
+                            }
+                        }
+                        #input-due-date-container:hover{
+                            background-color: #d4d3d3;
+                        }
+                    }
+                    #add-task-and-delete-task-container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 50px;
+                        border-bottom: 1px solid #d4d3d3;
+                        padding: 30px 0px;
+                        button{
+                            border: none;
+                            outline: none;
+                            width: 150px;
+                            margin: 5px;
+                            height: 50px;
+                            a{
+                                color: white;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                        }
+
+                        // a{
+                        //     color: white;
+                        //     text-decoration: none;
+                        //     text-transform: uppercase;
+                        //     display: inline-block;
+                        //     // width: 100%;
+                        //     // height: 100%;
+                        //     width: 150px;
+                        //     margin: 5px;
+                        //     height: 50px;
+                        //     display: flex;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        //     display: flex;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        // }
+
+                        #add-task-button{
+                            background-color: #4b494a;
+                        }
+
+                        #delete-task-button{
+                            background-color: #ed3622;
+                        }
+                    }
+                }
+            }
+        }
+        #to-do-list-container{
+            width: 100%;
+            a{
+                text-decoration : none;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            #to-do-list{
+                width: 100%;
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .list-item-container{
+                    width: 95%;
+                    .list-item{
+                        width: 100%;
+                        height: 50px;
+                        border-bottom: 1px solid #d4d3d3;
+                        display: flex;
+                        justify-content: space;
+                        align-items: center;
+                        color: gray;
+                        position:relative;
+                        button{
+                            border: none;
+                            outline: none;
+                        }
+                        .check-box{
+                            border: 2px solid #d4d3d3;
+                            border-radius: 2px;
+                            width: 20px;
+                            height: 20px;
+                            background-color: transparent;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            i{
+                                color: transparent;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                font-size: 20px;
+                            }
+                        }
+                        .description-due-date-container{
+                            position: absolute;
+                            width: 420px;
+                            padding: 0px 30px;
+                            .description-container{
+                                height: 50%;
+                                white-space: nowrap;
+                                overflow-x: scroll;
+                            }
+                            .description-container::-webkit-scrollbar{
+                                height: 0px;
+                                background-color: transparent;
+                            }
+                            .due-date-container{
+                                height: 50%;
+                            }
+                            .strike-off-text{
+                                text-decoration: line-through;
+                            }
+                        }
+                        .catergory-container{
+                            position: absolute;
+                            right: 0px;
+                            width: 80px;
+                            height: 40px;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: indigo;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,8 +1,120 @@
 <html>
-    <head>
-        <title><%= title %></title>
-    </head>
-    <body>
-        <h1>To Do List > <%= title %></h1>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="favicon/favicon.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/7e5368e77b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- TO-DO List Container -->
+    <div id="container">
+        <!-- Heading of TO-DO list app -->
+        <h1>TODO App</h1>
+		<!-- TO-DO List Main Body -->
+        <div id="main-body">
+			<!-- Form container to take Input For TO-DO List -->
+            <div id="form-container">
+				<!-- Form to take Input For TO-DO List -->
+                <form action="/add-task" method="POST">
+					<!--Input tag for Description of Task-->
+                    <div id="input-description-container">
+                        <div class="label-container">
+                            <label for="input-description">description</label>
+                        </div>
+                        <input type="text" name="input-description" id="input-description" placeholder="What do you need to do?" required>
+					</div>
+                    <div id="input-category-due-date-container">
+						<!-- Select Tag to select category of task-->
+                        <div id="input-category-container">
+                            <div class="label-container">
+                                <label for="input-category">category</label>
+                            </div>
+                            <div class="accordian-container">
+                                <div class="accordian-display-container">
+                                    <input type="text" name="category" value="Choose a category" placeholder="Choose a category" id="accordian-display" readonly>
+                                    <i class="fas fa-sort-down"></i>
+                                </div>
+                                <div class="accordian">
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="none">
+                                    <label for="none">None</label>
+                                </div>
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="personal">
+                                    <label for="personal">Personal</label>
+                                </div>
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="work">
+                                    <label for="work">Work</label>
+                                </div>
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="school">
+                                    <label for="school">School</label>
+                                </div>
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="cleaning">
+                                    <label for="cleaning">Cleaning</label>
+                                </div>
+                                <div class="accordian-item">
+                                    <input type="radio" name="task-category" id="other">
+                                    <label for="other">Other</label>
+                                </div>
+                                </div>
+                            </div>
+						</div>
+						<!--Input Tag to Select Date of Task-->
+                        <div id="input-due-date-container">
+                            <div class="label-container">
+                                <label for="input-due-date">due date</label>
+                            </div>
+                            <input type="date" name="input-due-date" id="input-due-date">
+                        </div>
+                    </div>
+                    <div id="add-task-and-delete-task-container">
+                        <button type="submit" id="add-task-button"><a> <i class="fas fa-plus"></i> &emsp; add task</a></button>
+                        <button type="button" id="delete-task-button"> <a href='/delete-task' id="delete-task"> <i class="far fa-trash-alt"></i> &ensp; delete tasks</a></button>
+                    </div>
+                </form>
+				</div>
+				<!--Task List Container-->
+                <div id="to-do-list-container">
+					<!--Task List-->
+                    <ul id="to-do-list">
+                        <% for(let task of task_list) { %>
+                            <li class="list-item-container">
+                                <a href="/mark-task?id=<%= task["id"]%>">
+                                <div class="list-item" id=<%= task["id"]%> data-task-completed = "false">
+                                    <button class="check-box">
+                                        <i class="fas fa-check-square"></i>
+                                        <!-- <i class="far fa-square"></i> -->
+                                    </button>
+                                    <div class="description-due-date-container">
+                                        <div class="description-container">
+                                        <%= task["description"] %>
+                                        </div>
+                                        <div class="due-date-container">
+                                            <i class="fas fa-calendar-alt"></i> <%= task["date"]%>
+                                        </div>
+                                    </div>
+                                    <div class="catergory-container" style="background-color : <%=color_list[task["category"]]%> ; color:white;">
+                                        <%if(task["category"] != 'None' && task["category"] != 'Choose a category'){%> 
+                                            <%= task["category"]%>
+                                        <%}%> 
+                                    </div>
+                                </div>
+                            </a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="js/accordian.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/home.js"></script>
     </body>
 </html>

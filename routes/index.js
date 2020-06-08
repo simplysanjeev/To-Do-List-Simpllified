@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const homeController = require('../controllers/home_controller');
-router.get('/', homeController.home);
-router.use('/users', require('./users'));
-console.log('Router Loaded');
+const homeControllers = require('../controllers/home_controller');
+router.get('/', homeControllers.home);
+router.post('/add-task', homeControllers.addTask);
+router.get('/delete-task', homeControllers.deleteTask);
+router.get('/mark-task', homeControllers.markTask);
 module.exports = router;
