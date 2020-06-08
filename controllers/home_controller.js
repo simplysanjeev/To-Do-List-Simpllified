@@ -19,7 +19,7 @@ module.exports.addTask = function(request, response){
     let taskDetail = request.body;
     let task = {}
     task["id"] = new Date().valueOf();
-    task["marked"] = "false";
+    task["taskCompleteStatus"] = "false";
     task["description"] = taskDetail["input-description"];
     task["category"] = taskDetail["category"];
     let date = taskDetail["input-due-date"];
@@ -31,7 +31,6 @@ module.exports.addTask = function(request, response){
 
 module.exports.deleteTask = function(request, response){
     let idArray =  request.query.id.split(',');
-    console.log(idArray);
     for(let id of idArray){
         let index = -1;
         for(let i = 0;  i < taskList.length; i++){
@@ -48,6 +47,19 @@ module.exports.deleteTask = function(request, response){
 }
 
 module.exports.markTask = function(request, response){
-    console.log(request.query);
-    response.redirect('back');
+    let id = request.query.id;
+    //TODO find the object
+    for(let i = 0; i < taskList.length; i++){
+        if(id == taskList[i].id){
+            //TODO update the object
+            if(taskList[i]["taskCompleteStatus"] == "false"){
+                taskList[i]["taskCompleteStatus"] = "true"; 
+            }else{
+                taskList[i]["taskCompleteStatus"] = "false"
+            }
+            break;
+        }
+    }
+    //TODO render the page
+    response.status(204).send();
 }

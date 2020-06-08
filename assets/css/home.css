@@ -142,7 +142,7 @@ body {
           width: 95%; }
           body #container #to-do-list-container #to-do-list .list-item-container .list-item {
             width: 100%;
-            height: 50px;
+            height: 60px;
             border-bottom: 1px solid #d4d3d3;
             display: flex;
             justify-content: space;

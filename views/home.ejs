@@ -83,10 +83,9 @@
                         <% for(let task of task_list) { %>
                             <li class="list-item-container">
                                 <a href="/mark-task?id=<%= task["id"]%>">
-                                <div class="list-item" id=<%= task["id"]%> data-task-completed = "false">
+                                <div class="list-item" id=<%= task["id"]%> data-task-completed = <%= task["taskCompleteStatus"]%>>
                                     <button class="check-box">
                                         <i class="fas fa-check-square"></i>
-                                        <!-- <i class="far fa-square"></i> -->
                                     </button>
                                     <div class="description-due-date-container">
                                         <div class="description-container">
