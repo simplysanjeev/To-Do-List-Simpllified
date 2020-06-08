@@ -1,7 +1,7 @@
 //Launching Express Server
 const express = require('express');
 const port = 8000;
-const db = require('./config/mongoose')
+const db = require('./config/mongoose');
 const Task = require('./models/task');
 const app = express();
 app.use(express.urlencoded());

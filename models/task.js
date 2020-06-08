@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
 const taskScehma = new mongoose.Schema({
-    
+    taskCompleteStatus:{
+        type: String
+    },
     description : {
         type : String,
         required : true
@@ -10,8 +12,10 @@ const taskScehma = new mongoose.Schema({
         type: String
     },
     date : {
-        type: Date
+        type: String
     }
+},{
+    timestamps : true
 });
 
 const Task = mongoose.model('Task', taskScehma);
