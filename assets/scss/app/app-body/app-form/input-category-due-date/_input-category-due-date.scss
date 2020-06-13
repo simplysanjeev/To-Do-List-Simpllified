@@ -1,0 +1,12 @@
+.input__category__due__date__container{
+    width: 100%;
+    border-bottom: 1px solid #d4d3d3;
+    display: flex;
+    > div{
+        width: 50%;
+    }
+}
+
+@import './input-category/input-category';
+
+@import './input-due-date/input-due-date';

@@ -1,0 +1,9 @@
+.input__category__container{
+    border-right:1px solid #d4d3d3;
+    padding-bottom: 10px;
+}
+.input__category__container:hover{
+    background-color: #d4d3d3;
+}
+
+@import './accordian/accordian';

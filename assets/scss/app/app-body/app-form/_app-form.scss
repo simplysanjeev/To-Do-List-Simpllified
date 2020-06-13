@@ -1,0 +1,35 @@
+//scss for form container
+.app__form__container{
+    width: 100%;
+}
+
+//scss for form
+.form{
+    width: 100%;
+    .label__container{
+        padding-left: 30px;
+        padding-top: 10px;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    input, select{
+        width: 100%;
+        height: 20px;
+        border: none;
+        outline: none;
+        padding-left: 30px;
+        margin-bottom: 5px;
+        background-color: transparent;
+    }
+}
+
+//importing scss to take input of description of task
+@import './input-description/input-description';
+
+//importing scss to take input of category and due date of task
+@import './input-category-due-date/input-category-due-date';
+
+//importing scss for add task and delete task button
+@import './button/button';

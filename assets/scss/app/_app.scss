@@ -1,0 +1,16 @@
+//scss for app container
+.app__container{
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    width: 600px;
+    height: fit-content;
+}
+
+//importing scss for heading for app heading
+@import './app-name/app-name';
+
+//importing scss for app body [form to take input]
+@import './app-body/app-body';
+
+//importing scss for app content [i.e to do list]
+@import './app-content/app-content';

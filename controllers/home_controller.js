@@ -1,4 +1,6 @@
 const Task = require('../models/task');
+
+//List of Color Mapped to Category [Category] -> [Color]
 let color = {
                     'Choose a category':'transparent',
                     'None' : 'transparent',
@@ -8,8 +10,11 @@ let color = {
                     'Cleaning' : 'slateblue',
                     'Other' : 'dodgerblue'
             };
+
+//List of Months 
 let month =['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+//Home Page Controller
 module.exports.home = function (request, response){
     Task.find({}, function(error, taskList){
         if(error){
@@ -21,6 +26,8 @@ module.exports.home = function (request, response){
     
 }
 
+
+//Controller to add task in TODO List
 module.exports.addTask = function(request, response){
     let taskDetail = request.body;
     let task = {}
@@ -39,6 +46,7 @@ module.exports.addTask = function(request, response){
     });
 }
 
+//Controller to Delete Task
 module.exports.deleteTask = function(request, response){
     if(Object.keys(request.query).length === 0){
         return response.redirect('back');
@@ -55,6 +63,7 @@ module.exports.deleteTask = function(request, response){
     return response.redirect('back');
 }
 
+//Controller to Mark Task [As Complete] and Unmark Task [Not Completed]
 module.exports.markTask = function(request, response){
     let id = request.query.id;
     Task.findById({"_id" : id}, function(error, task){

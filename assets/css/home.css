@@ -3,193 +3,218 @@ body {
   margin: 0px;
   display: flex;
   justify-content: center; }
-  body #container {
-    background-color: #FFFFFF;
-    margin-top: 10px;
-    width: 600px;
-    height: fit-content; }
-    body #container h1 {
-      text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      margin: 0px;
-      margin-top: 10px;
-      color: #808080;
-      font-family: 'Courier New', Courier, monospace;
-      letter-spacing: 0.1rem;
-      border-bottom: 1px solid #d4d3d3; }
-    body #container #main-body {
-      width: 100%; }
-      body #container #main-body #form-container {
-        width: 100%; }
-        body #container #main-body #form-container .label-container {
-          padding-left: 30px;
-          padding-top: 10px;
-          text-transform: uppercase;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 10px;
-          font-weight: bold; }
-        body #container #main-body #form-container form {
-          width: 100%; }
-          body #container #main-body #form-container form input, body #container #main-body #form-container form select {
-            width: 100%;
-            height: 20px;
-            border: none;
-            outline: none;
-            padding-left: 30px;
-            margin-bottom: 5px;
-            background-color: transparent; }
-          body #container #main-body #form-container form #input-description-container {
-            width: 100%;
-            border-bottom: 1px solid #d4d3d3;
-            padding-bottom: 10px; }
-          body #container #main-body #form-container form #input-description-container:hover {
-            background-color: lightgrey; }
-          body #container #main-body #form-container form #input-category-due-date-container {
-            width: 100%;
-            border-bottom: 1px solid #d4d3d3;
-            display: flex; }
-            body #container #main-body #form-container form #input-category-due-date-container div {
-              width: 50%; }
-            body #container #main-body #form-container form #input-category-due-date-container #input-category-container {
-              border-right: 1px solid #d4d3d3;
-              padding-bottom: 10px; }
-              body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container {
-                width: 100%;
-                position: relative; }
-                body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian-display-container {
-                  width: 100%; }
-                  body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian-display-container #accordian-display {
-                    width: 95%;
-                    height: 40px;
-                    cursor: pointer; }
-                body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian {
-                  z-index: 10;
-                  width: 100%;
-                  position: absolute;
-                  top: 35px;
-                  display: none; }
-                  body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian .accordian-item {
-                    width: 100%;
-                    height: 30px; }
-                    body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian .accordian-item input {
-                      display: none; }
-                    body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian .accordian-item label {
-                      width: 100%;
-                      height: 100%;
-                      display: block;
-                      display: flex;
-                      align-items: center;
-                      padding-left: 30px;
-                      box-sizing: border-box;
-                      background-color: white; }
-                    body #container #main-body #form-container form #input-category-due-date-container #input-category-container .accordian-container .accordian .accordian-item label:hover {
-                      background-color: purple;
-                      color: white; }
-            body #container #main-body #form-container form #input-category-due-date-container #input-category-container:hover {
-              background-color: #d4d3d3; }
-            body #container #main-body #form-container form #input-category-due-date-container #input-due-date-container {
-              border-left: 1px solid #d4d3d3;
-              padding-bottom: 10px; }
-              body #container #main-body #form-container form #input-category-due-date-container #input-due-date-container .label-container {
-                padding-bottom: 10px; }
-            body #container #main-body #form-container form #input-category-due-date-container #input-due-date-container:hover {
-              background-color: #d4d3d3; }
-          body #container #main-body #form-container form #add-task-and-delete-task-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;
-            border-bottom: 1px solid #d4d3d3;
-            padding: 30px 0px; }
-            body #container #main-body #form-container form #add-task-and-delete-task-container button {
-              border: none;
-              outline: none;
-              width: 150px;
-              margin: 5px;
-              height: 50px; }
-              body #container #main-body #form-container form #add-task-and-delete-task-container button a {
-                color: white;
-                text-decoration: none;
-                text-transform: uppercase;
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center; }
-            body #container #main-body #form-container form #add-task-and-delete-task-container #add-task-button {
-              background-color: #4b494a; }
-            body #container #main-body #form-container form #add-task-and-delete-task-container #delete-task-button {
-              background-color: #ed3622; }
-    body #container #to-do-list-container {
-      width: 100%; }
-      body #container #to-do-list-container a {
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        height: 100%; }
-      body #container #to-do-list-container #to-do-list {
-        width: 100%;
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; }
-        body #container #to-do-list-container #to-do-list .list-item-container {
-          width: 95%; }
-          body #container #to-do-list-container #to-do-list .list-item-container .list-item {
-            width: 100%;
-            height: 60px;
-            border-bottom: 1px solid #d4d3d3;
-            display: flex;
-            justify-content: space;
-            align-items: center;
-            color: gray;
-            position: relative; }
-            body #container #to-do-list-container #to-do-list .list-item-container .list-item button {
-              border: none;
-              outline: none; }
-            body #container #to-do-list-container #to-do-list .list-item-container .list-item .check-box {
-              border: 2px solid #d4d3d3;
-              border-radius: 2px;
-              width: 20px;
-              height: 20px;
-              background-color: transparent;
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-              body #container #to-do-list-container #to-do-list .list-item-container .list-item .check-box i {
-                color: transparent;
-                display: block;
-                width: 100%;
-                height: 100%;
-                font-size: 20px; }
-            body #container #to-do-list-container #to-do-list .list-item-container .list-item .description-due-date-container {
-              position: absolute;
-              width: 420px;
-              padding: 0px 30px; }
-              body #container #to-do-list-container #to-do-list .list-item-container .list-item .description-due-date-container .description-container {
-                height: 50%;
-                white-space: nowrap;
-                overflow-x: scroll; }
-              body #container #to-do-list-container #to-do-list .list-item-container .list-item .description-due-date-container .description-container::-webkit-scrollbar {
-                height: 0px;
-                background-color: transparent; }
-              body #container #to-do-list-container #to-do-list .list-item-container .list-item .description-due-date-container .due-date-container {
-                height: 50%; }
-              body #container #to-do-list-container #to-do-list .list-item-container .list-item .description-due-date-container .strike-off-text {
-                text-decoration: line-through; }
-            body #container #to-do-list-container #to-do-list .list-item-container .list-item .catergory-container {
-              position: absolute;
-              right: 0px;
-              width: 80px;
-              height: 40px;
-              border-radius: 4px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background-color: indigo;
-              color: white; }
+
+.app__container {
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  width: 600px;
+  height: fit-content; }
+
+.app__name {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px;
+  margin-top: 10px;
+  color: #808080;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #d4d3d3; }
+
+.app__body {
+  width: 100%; }
+
+.app__form__container {
+  width: 100%; }
+
+.form {
+  width: 100%; }
+  .form .label__container {
+    padding-left: 30px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold; }
+  .form input, .form select {
+    width: 100%;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    background-color: transparent; }
+
+.input__description__container {
+  width: 100%;
+  border-bottom: 1px solid #d4d3d3;
+  padding-bottom: 10px; }
+
+.input__description__container:hover {
+  background-color: lightgrey; }
+
+.input__category__due__date__container {
+  width: 100%;
+  border-bottom: 1px solid #d4d3d3;
+  display: flex; }
+  .input__category__due__date__container > div {
+    width: 50%; }
+
+.input__category__container {
+  border-right: 1px solid #d4d3d3;
+  padding-bottom: 10px; }
+
+.input__category__container:hover {
+  background-color: #d4d3d3; }
+
+.accordian__container {
+  width: 100%;
+  position: relative; }
+
+.accordian__display__container {
+  width: 100%; }
+  .accordian__display__container .accordian__display {
+    width: 95%;
+    height: 40px;
+    cursor: pointer; }
+
+.accordian {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  display: none; }
+
+.accordian__item {
+  width: 100%;
+  height: 30px; }
+  .accordian__item input {
+    display: none; }
+  .accordian__item label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    box-sizing: border-box;
+    background-color: white; }
+  .accordian__item label:hover {
+    background-color: purple;
+    color: white; }
+
+.input__due__date__container {
+  border-left: 1px solid #d4d3d3;
+  padding-bottom: 10px; }
+  .input__due__date__container .label__container {
+    padding-bottom: 10px; }
+
+.input__due__date__container:hover {
+  background-color: #d4d3d3; }
+
+.add__task__delete__task__button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #d4d3d3;
+  padding: 30px 0px; }
+
+.button {
+  border: none;
+  outline: none;
+  width: 150px;
+  margin: 5px;
+  height: 50px; }
+  .button a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.add__task {
+  background-color: #4b494a; }
+
+.delete__task {
+  background-color: #ed3622; }
+
+.to__do__list__container {
+  width: 100%; }
+  .to__do__list__container a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.to__do__list {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.list__item__container {
+  width: 95%; }
+
+.list__item {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #d4d3d3;
+  display: flex;
+  justify-content: space;
+  align-items: center;
+  color: gray;
+  position: relative; }
+  .list__item button {
+    border: none;
+    outline: none; }
+
+.check__box {
+  border: 2px solid #d4d3d3;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .check__box i {
+    color: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 20px; }
+
+.description__due__date__container {
+  position: absolute;
+  width: 420px;
+  padding: 0px 30px; }
+  .description__due__date__container .description__container {
+    height: 50%;
+    white-space: nowrap;
+    overflow-x: scroll; }
+  .description__due__date__container .description__container::-webkit-scrollbar {
+    height: 0px;
+    background-color: transparent; }
+  .description__due__date__container .due__date__container {
+    height: 50%; }
+
+.catergory__container {
+  position: absolute;
+  right: 0px;
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: indigo;
+  color: white; }

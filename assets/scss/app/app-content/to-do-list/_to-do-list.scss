@@ -1,0 +1,12 @@
+.to__do__list{
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@import './list-item/list-item';

@@ -1,0 +1,7 @@
+//scss for app body
+.app__body{
+    width: 100%;
+}
+
+//importing scss for form [i.e take input for task detail]
+@import './app-form/app-form';

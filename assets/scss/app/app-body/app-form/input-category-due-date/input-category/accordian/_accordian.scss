@@ -1,0 +1,44 @@
+.accordian__container{
+    width: 100%;
+    position: relative;
+}
+
+.accordian__display__container{
+    width: 100%;
+    .accordian__display{
+        width: 95%;
+        height: 40px;
+        cursor: pointer;
+    }
+
+}
+
+.accordian{
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    top:35px;
+    display: none;
+}
+
+.accordian__item{
+    width: 100%;
+    height: 30px;
+    input{
+        display: none;
+    }
+    label{
+        width: 100%;
+        height: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        box-sizing: border-box;
+        background-color: white;
+    }
+    label:hover{
+        background-color: purple;
+        color: white;
+    }
+}
